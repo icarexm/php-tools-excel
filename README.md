@@ -1,7 +1,7 @@
-使用`Composer`安装`tinyframe`的excel处理类库：
+使用`Composer`安装`icarexm`的excel处理类库：
 
 ~~~
-composer require tinyframe/excel:dev-master
+composer require icarexm/excel:dev-master
 
 ~~~
 ## 从数据库中导出excel数据
@@ -21,11 +21,12 @@ $fields = [
     'age'       => '用户年龄',
 ];
 //执行导出
-og\excel\facade\Excel::export($data, $fields);
+$excelTool = new icarexm\excel\Excel();
+$excelTool->export($data, $fields);
 
 ~~~
 实际效果：
-![](images/screenshot_1587804155654.png)
+![](https://img.kancloud.cn/88/68/88686a987a56c608375558d09dd39085_393x201.png)
 
 ## 导出多个sheet
 控制器中添加如下代码：
@@ -56,13 +57,14 @@ $fields = [
         ],
 ];
 
-og\excel\facade\Excel::export($data, $fields);
+$excelTool = new icarexm\excel\Excel();
+$excelTool->export($data, $fields);
 
 ~~~
 **sheet1：**
-![](images/screenshot_1587804494780.png)
+![](https://img.kancloud.cn/98/30/98305836c1ef7bdcb8a2efce9c86e773_531x184.png)
 **sheet2：**
-![](images/screenshot_1587804521475.png)
+![](https://img.kancloud.cn/5c/91/5c910a1edb76723728fa4e8351515159_541x234.png)
 
 ## 读取excel数据
 我们在控制器中添加如下代码：
@@ -70,7 +72,8 @@ og\excel\facade\Excel::export($data, $fields);
 //读取的excel文件地址
 $path = '数据.xlsx';
 //读取数据
-$data = og\excel\facade\Excel::read($path);
+$excelTool = new icarexm\excel\Excel();
+$excelTool->read($path, 'all', true);
 
 ~~~
 ` $data`就是读取后的数据

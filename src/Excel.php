@@ -12,7 +12,7 @@
 namespace icarexm\excel;
 
 use Exception;
-use tools\helper\Arr;
+use icarexm\helper\Arr;
 
 class Excel
 {
