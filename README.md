@@ -26,6 +26,7 @@ $excelTool->export($data, $fields);
 
 ~~~
 实际效果：
+
 ![](https://img.kancloud.cn/88/68/88686a987a56c608375558d09dd39085_393x201.png)
 
 ## 导出多个sheet
@@ -62,8 +63,10 @@ $excelTool->export($data, $fields);
 
 ~~~
 **sheet1：**
+
 ![](https://img.kancloud.cn/98/30/98305836c1ef7bdcb8a2efce9c86e773_531x184.png)
 **sheet2：**
+
 ![](https://img.kancloud.cn/5c/91/5c910a1edb76723728fa4e8351515159_541x234.png)
 
 ## 读取excel数据
