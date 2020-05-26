@@ -65,6 +65,8 @@ $excelTool->export($data, $fields);
 **sheet1：**
 
 ![](https://img.kancloud.cn/98/30/98305836c1ef7bdcb8a2efce9c86e773_531x184.png)
+
+
 **sheet2：**
 
 ![](https://img.kancloud.cn/5c/91/5c910a1edb76723728fa4e8351515159_541x234.png)
@@ -76,7 +78,7 @@ $excelTool->export($data, $fields);
 $path = '数据.xlsx';
 //读取数据
 $excelTool = new icarexm\excel\Excel();
-$excelTool->read($path, 'all', true);
+$data = $excelTool->read($path, 'all', true);
 
 ~~~
 ` $data`就是读取后的数据
